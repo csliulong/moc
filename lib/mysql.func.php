@@ -20,8 +20,8 @@ function insert($table,$array){
 	$keys=join(",", array_keys($array));
 	$vals="'".join("','",array_values($array))."'";
 	$sql="insert {$table}($keys) values({$vals})";
-//	echo $sql;
-//	echo '<hr/>';
+	echo $sql;
+	echo '<hr/>';
 	mysql_query($sql);
 	return mysql_insert_id();	
 }
@@ -101,8 +101,15 @@ function fetchAll($sql,$result_type=MYSQL_ASSOC){
 }
 
 
+function getResultNum($sql){
+	$result=mysql_query($sql);
+	return mysql_num_rows($result);
+}
 
 
+function getInsertId(){
+	return mysql_insert_id();
+}
 
 
 

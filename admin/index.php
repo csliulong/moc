@@ -37,7 +37,14 @@ checkLogined();
 
 <body>
 
-<header class="Hui-header cl"> <a class="Hui-logo l" title="H-ui.admin v2.2" href="/">H-ui.admin</a> <a class="Hui-logo-m l" href="/" title="H-ui.admin">H-ui</a> <span class="Hui-subtitle l">V2.2</span> <span class="Hui-userbox"><span class="c-white">超级管理员：xxxxxx</span> <a class="btn btn-danger radius ml-10" href="#" title="退出"><i class="icon-off"></i> 退出</a></span> <a aria-hidden="false" class="Hui-nav-toggle" href="#"></a> </header>
+<header class="Hui-header cl"> <a class="Hui-logo l" title="H-ui.admin v2.2" href="/">H-ui.admin</a> <a class="Hui-logo-m l" href="/" title="H-ui.admin">H-ui</a> <span class="Hui-subtitle l">V2.2</span> <span class="Hui-userbox"><span class="c-white">超级管理员：
+<?php 
+  if (isset($_SESSION['adminName'])) {
+    echo $_SESSION['adminName'];
+  }elseif (isset($_COOKIE['adminName'])) {
+    echo $_COOKIE['adminName'];
+  } 
+?></span> <a class="btn btn-danger radius ml-10" href="#" title="退出"><i class="icon-off"></i> 退出</a></span> <a aria-hidden="false" class="Hui-nav-toggle" href="#"></a> </header>
 <aside class="Hui-aside">
   <input runat="server" id="divScrollValue" type="hidden" value="" />
   <div class="menu_dropdown bk_2">
@@ -124,7 +131,7 @@ checkLogined();
         <ul>
           <li><a _href="admin-role.html" href="javascript:void(0)">角色管理</a></li>
           <li><a _href="admin-permission.html" href="javascript:void(0)">权限管理</a></li>
-          <li><a _href="admin-list.html" href="javascript:void(0)">管理员列表</a></li>
+          <li><a _href="admin-list.php" href="javascript:void(0)">管理员列表</a></li>
         </ul>
       </dd>
     </dl>
