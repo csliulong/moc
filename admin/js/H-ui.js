@@ -406,3 +406,9 @@ function displayimg(){
 	});
 }
 setTimeout("displayimg()",4000);
+
+function delCate(id){
+	if (window.confirm("您确定要删除么？不可以恢复哦！")) {
+		window.location="doAdminAction.php?act=delCate&id="+id;
+	}
+}

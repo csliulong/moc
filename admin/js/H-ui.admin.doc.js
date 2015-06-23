@@ -43,9 +43,11 @@ function user_start(obj,id){
 }
 /*用户-删除*/
 function user_del(obj,id){
+
 	layer.confirm('确认要删除吗？',function(index){
 		$(obj).parents("tr").remove();
-		layer.msg('已删除!',1);
+		layer.msg('已删除xxxxxxxxxxx!',1);
+		window.location="doAdminAction.php?act=delUser&id="+id;
 	});
 }
 /*------------资讯管理----------------*/
@@ -59,7 +61,7 @@ function article_class_add(obj){
 	if(v==""||v==null){
 		return false;
 	}else{
-		//ajax请求 添加分类
+		window.location="doAdminAction.php?act=addCate";
 	}
 }
 
@@ -129,6 +131,15 @@ function picture_fabu(obj,id){
 	$(obj).parents("tr").find(".picture-status").html('<span class="label label-success radius">已发布</span>');
 	$(obj).remove();
 }
+
+function change(val){
+	window.location="listPro2.php?order="+val;
+}
+
+function doImg(id,act){
+	window.location="doAdminAction.php?act="+act+"&id="+id;
+}
+
 /*管理员-删除*/
 function picture_del(obj,id){
 	layer.confirm('确认要删除吗？',function(index){
@@ -136,10 +147,37 @@ function picture_del(obj,id){
 		layer.msg('已删除!',1);
 	});
 }
+
+
 /*------------产品库------------------*/
 /*产品-品牌-编辑*/
 function product_brand_edit(id,w,h,title,url){
 	layer_show(w,h,title,url);
+}
+
+function product_edit(id,w,h,title,url){
+	layer_show(w,h,title,url);
+}
+
+function product_del(obj,id){
+	layer.confirm('确认要删除吗？',function(index){
+		$(obj).parents("tr").remove();
+		layer.msg('已删除!',1);
+	});
+}
+
+function show_detail(id,t){
+	$("#showDetail"+id).dialog({
+		height:"auto",
+		width:"auto",
+		position:{my:"center",at:"center",collision:"fit"},
+		modal:false,
+		draggable:true,
+		resizable:true,
+		title:"商品名称："+t,
+		show:"slide",
+		hide:"explode"
+	});
 }
 
 /*------------管理员管理--------------*/
@@ -186,6 +224,7 @@ function admin_del(obj,id){
 	layer.confirm('确认要删除吗？',function(index){
 		$(obj).parents("tr").remove();
 		layer.msg('已删除!',1);
+		window.location="doAdminAction.php?act=delAdmin&id="+id;
 	});
 }
 /*管理员-编辑*/

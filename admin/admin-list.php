@@ -79,7 +79,7 @@ $rows=getAdminByPage($page,$pageSize);
         <td><?php echo $row['admin_role'];?></td>
         <td><?php echo time();?></td>
         <td class="admin-status"><span class="label label-success radius">已启用</span></td>
-        <td class="f-14 admin-manage"><a style="text-decoration:none" onClick="admin_stop(this,'10001')" href="javascript:;" title="停用"><i class="icon-hand-down"></i></a> <a title="编辑" href="javascript:;" onclick="admin_edit('4','400','310','角色编辑','admin-edit.html')" class="ml-5" style="text-decoration:none"><i class="icon-edit"></i></a> <a title="删除" href="javascript:;" onclick="admin_del(this,'1')" class="ml-5" style="text-decoration:none"><i class="icon-trash"></i></a></td>
+        <td class="f-14 admin-manage"><a style="text-decoration:none" onClick="admin_stop(this,'10001')" href="javascript:;" title="停用"><i class="icon-hand-down"></i></a> <a title="编辑" href="javascript:;" onclick="admin_edit('4','500','310','角色编辑','editAdmin.php?id=<?php echo $row[id];?>')" class="ml-5" style="text-decoration:none"><i class="icon-edit"></i></a> <a title="删除" href="javascript:;" onclick="admin_del(this,'<?php echo $row[id];?>')" class="ml-5" style="text-decoration:none"><i class="icon-trash"></i></a></td>
       </tr>
       <?php endforeach;?>
       <?php if($totalRows>$pageSize):?>

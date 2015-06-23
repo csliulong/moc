@@ -125,15 +125,29 @@ echo "<hr/>";
 
 //$result=buildRandomString(3,14);
 //verifyImage();
-verifyImage(3,5,5,5);
+//verifyImage(3,5,5,5);
 
-echo $result;
+//echo $result;
 
+//require_once '../include.php';
+// checkLogined();
+// $sql="select id,username,email,sex,face from imooc_user";
+// $rows=fetchAll($sql);
+// 	echo '<hr/>';
+// 	$face='4289d0d595369bef67291caa234a8005.jpg';
+// 	echo $face;
+// 	echo '<hr/>';
+// 	echo "../face/".$face;
+// 	echo '<hr/>';	
+// 	var_dump(file_exists("../face/".$face));
+// //	file_exists("../admin/face/".$face);
+// 	if (file_exists("../face/".$face)) {
+// 		echo "../face/".$face;
+// 		unlink("../face/".$face);
+// 	}
 
-
-
-
-
+$id=13;
+delUser($id);
 
 
 

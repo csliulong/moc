@@ -13,3 +13,13 @@ function buildRandomString($type=1,$length=4){
 	$chars=str_shuffle($chars);
 	return substr($chars, 0, $length);
 }
+
+
+function getUniName(){
+	return md5(uniqid(microtime(true),true));
+}
+
+
+function getExt($filename){
+	return strtolower(end(explode(".", $filename)));
+}

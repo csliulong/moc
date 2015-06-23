@@ -41,3 +41,26 @@ function getAdminByPage($page,$pageSize=2){
 	$rows=fetchAll($sql);
 	return $rows;
 }
+
+
+
+function editAdmin($id){
+	$arr=$_POST;
+	$arr['password']=md5($_POST['password']);
+	if (update("imooc_admin",$arr,"id={$id}")) {
+		$mes="编辑成功！<br/><a href='admin-list.php'>查看管理员列表</a>";
+	}else{
+		$mes="编辑失败！<br/><a href='admin-list.php'>请重新修改</a>";
+	}
+	return $mes;
+}
+
+
+function delAdmin($id){
+	if (delete("imooc_admin","id={$id}")) {
+		$mes="删除成功!<br/><a href='listAdmin.php'>查看管理员列表</a>";
+	}else{
+		$mes="删除失败！<br/><a href='listAdmin.php'>请重新删除</a>";
+	}
+	return $mes;
+}

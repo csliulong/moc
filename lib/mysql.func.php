@@ -46,7 +46,7 @@ function update($table,$array,$where=NULL){
 	
 		$sql="update {$table} set {$str} ".($where==NULL?NULL:" where ".$where);
 		$result=mysql_query($sql);
-//		echo $sql;
+		echo $sql;
 		if ($result){
 			return mysql_affected_rows();
 		}else {
@@ -79,7 +79,7 @@ function delete($table,$where){
  */
 function fetchOne($sql,$result_type=MYSQL_ASSOC){
 	$result=mysql_query($sql);
-	$row=mysql_fetch_array($result,$result_type);
+	$row=@mysql_fetch_array($result,$result_type);
 	return $row;
 }
 

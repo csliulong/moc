@@ -52,7 +52,8 @@ checkLogined();
       <dt><i class="icon-user"></i> 用户中心<b></b></dt>
       <dd>
         <ul>
-          <li><a _href="user-list.html" href="javascript:;">用户管理</a></li>
+          <li><a _href="user-list.php" href="javascript:;">用户管理</a></li>
+          <li><a _href="user-list2.php" href="javascript:;">用户管理2</a></li>
           <li><a _href="user-list-del.html" href="javascript:;">删除的用户</a></li>
           <li><a _href="user-list-black.html" href="javascript:;">黑名单</a></li>
           <li><a _href="record-browse.html" href="javascript:void(0)">浏览记录</a></li>
@@ -74,7 +75,7 @@ checkLogined();
       <dt><i class="icon-edit"></i> 资讯管理<b></b></dt>
       <dd>
         <ul>
-          <li><a _href="article-class.html" href="javascript:void(0)">分类管理</a></li>
+          <li><a _href="article-class.php" href="javascript:void(0)">分类管理</a></li>
           <li><a _href="article-list.html" href="javascript:void(0)">资讯管理</a></li>
         </ul>
       </dd>
@@ -83,8 +84,8 @@ checkLogined();
       <dt><i class="icon-picture"></i> 图片库<b></b></dt>
       <dd>
         <ul>
-          <li><a _href="article-class.html" href="javascript:void(0)">分类管理</a></li>
-          <li><a _href="picture-list.html" href="javascript:void(0)">图片管理</a></li>
+          <li><a _href="article-class.php" href="javascript:void(0)">分类管理</a></li>
+          <li><a _href="listProImages.php" href="javascript:void(0)">图片管理</a></li>
         </ul>
       </dd>
     </dl>
@@ -93,8 +94,9 @@ checkLogined();
       <dd>
         <ul>
           <li><a _href="product-brand.html" href="javascript:void(0)">品牌管理</a></li>
-          <li><a _href="article-class.html" href="javascript:void(0)">分类管理</a></li>
-          <li><a _href="codeing.html" href="javascript:void(0)">产品管理</a></li>
+          <li><a _href="article-class.php" href="javascript:void(0)">分类管理</a></li>
+          <li><a _href="listPro.php" href="javascript:void(0)">产品管理</a></li>
+          <li><a _href="listPro2.php" href="javascript:void(0)">产品管理2</a></li>
         </ul>
       </dd>
     </dl>
